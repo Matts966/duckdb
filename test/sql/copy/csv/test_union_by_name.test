@@ -219,3 +219,10 @@ from read_csv('data/csv/union_by_name_2/*.csv', union_by_name=True, parallel = f
 ----
 1	1	1	NULL
 
+# Test filtering
+query IIII
+from read_csv('data/csv/union_by_name_3/**/*.csv', union_by_name=True)
+where idx = 1;
+----
+1	1	1	NULL
+
